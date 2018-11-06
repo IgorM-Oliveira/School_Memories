@@ -1,0 +1,205 @@
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+}
+body{
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+}
+
+header{
+  background-color: white;
+  border-bottom:solid 2px red; 
+  font-size: 30px;
+}
+
+#nav ul{
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 90px;
+  margin: 0;
+  padding: 0;  
+  width: 200px;  
+  font-weight: 300;
+  background-color: white; 
+  border-radius: 0 5px 5px 5px;
+  box-shadow: 2px 2px 10px #777;  
+}
+
+#nav ul::before{
+  content: "";
+  position: relative;
+  display: block;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#nav ul::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -9px;
+  left: 0;
+  width: 0;   
+  border-left: solid 5px #555;
+  border-right: solid 5px transparent;
+  border-bottom: solid 5px #555;
+  border-top: solid 5px transparent;
+}
+
+ul li{  
+  list-style: none;
+}
+
+#nav > li{
+  position: relative; 
+  float: left;
+}
+
+#nav > li > a{
+  float: left;
+  padding: 20px 30px;  
+  text-decoration: none; 
+  color: black;  
+  height: 70px; 
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+}
+
+#nav > li > a:hover{
+  border-bottom: solid 5px #C13832 ;
+  box-shadow: 0 0 40px #111 inset;
+  -webkit-transition: box-shadow 0.2s ease-in-out;    
+}
+
+/*Sub-menu*/
+
+li li a{
+  display: block;
+  padding: 10px 20px;
+  color: black; 
+  text-decoration: none;
+  border-bottom: dashed 1px #D7D3C8; 
+  -webkit-transition: color .3s ease-in-out;
+}
+
+li li:last-child a{
+  border: 0;
+}
+
+li li a:hover{
+  color: #C13832;   
+  background-color: #222; 
+  -webkit-transform: scale(1.1);
+  font-weight: 500;
+  border-bottom: 0;
+  text-shadow: 0 -1px #111;
+}
+
+li li:hover a::before{
+  content: "";
+  position:absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -1px;
+  bottom: -9px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px #111;
+  border-bottom: solid 5px transparent;
+  border-top: solid 5px #111;  
+}
+
+li li:hover a::after, li li:last-child:hover a::after{
+  content: "";
+  position:absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: 0px;
+  top: -9px;
+  border-left: solid 5px #111;
+  border-right: solid 5px transparent;
+  border-bottom: solid 5px #111;
+  border-top: solid 5px transparent;  
+}
+
+li li:last-child:hover a::before{
+  top: -9px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px #111;
+  border-bottom: solid 5px #111;
+  border-top: solid 5px transparent;  
+}
+
+/* Drop-down effects*/
+
+#nav li:hover > ul{
+  display: block;
+}
+
+/*========================================
+    Useful
+  ========================================*/
+
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;  
+}
+
+#buscar,
+#local,
+#cadastrar{
+	display: none;
+}
+
+input{
+  font-size: 70px;
+}
+
+h1{
+  font-size: 10vw;
+}
+
+.invisivel
+{
+  display: none;
+}
+
+.img{
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+img{
+  margin: 10px;
+}
+
+button{
+  background: white;
+  color: black;
+  font-size: 30px;
+  height: 6vw;
+  width: 15vw;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  font-size: 4vw;
+  font-family: 'Merriweather', serif;
+  margin-left: 20px;
+}
