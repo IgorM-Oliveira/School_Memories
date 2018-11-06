@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Madrid</title>
 		<link rel="stylesheet" type="text/css" href="Css_Principal.css">
 		<meta charset="utf-8">
 	</head>
 <body>
-
 	<header class="clearfix">
 		<nav>
 		    <ul id="nav">
