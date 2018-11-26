@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Madrid</title>
+		<link rel="stylesheet" type="text/css" href="css-principal.css">
+		<link href="https://fonts.googleapis.com/css?family=Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header class="clearfix">
+			<nav>
+			    <ul class="nav">
+			    	<li><a href="#home">Home</a></li>
+			    	<li><a href="#lugar">Lugares</a>
+			    		<ul>
+			    			<li><a href="#local">Cadastrar Local</a></li>
+			        		<li><a href="#buscar">Buscar</a></li>
+			    		</ul>
+			    	</li>
+			    	<li><a href="#lista">Listar</a></li>
+			    </ul>
+			    <ul class="nav">
+				    <li id="confirme"><a href="#cadastrar">Login</a></li>
+			    </ul>
+			</nav>
+			<div id="esquerda">
+				<p id="nome_usuario"></p>
+			</div>
+		</header>
+		<section id="home" >
+			<div id="todo-home">
+				<div id="text-home">
+					<h1>Madrid</h1>
+					<h2>Um bom local a viajar</h2>
+				</div>
+				<div id="img-home">
+					<img src="https://cdn.getyourguide.com/img/tour_img-371025-146.jpg">
+					<img src="https://3.bp.blogspot.com/-ANeg8hzVICU/Urm5Izux74I/AAAAAAAAQho/2smgzzsZCJU/s1600/palacio-real-Madrid.jpg">
+					<img src="https://cdn.getyourguide.com/img/tour_img-162184-145.jpg">
+				</div>
+			</div>
+		</section>
+
+		<section id="lugar" class="invisivel">
+			<div id="bom">
+				<a href="#local" id="right">Cadastrar Local</a>
+				<a href="#buscar" id="left">Buscar</a>
+			</div>
+		</section>
+
+		<section id="buscar" class="invisivel">
+			<div id="pesq" >
+				<h1>Busca</h1>
+				<form>
+					<input type="text" placeholder="Digite seu local" id="busq">
+				</form>
+				<div class="button">
+					<button onclick="pesq()">Pesquisar</button>
+					<p id="busca"></p>
+				</div>
+				<div>
+					<p id="nome_loc_busq"></p>
+					<p id="cidade_busq"></p>
+					<p id="rua_busq"></p>
+					<p id="bairro_busq"></p>
+					<p id="num_busq"></p>
+					<p id="comit_busq"></p>
+				</div>
+			</div>
+		</section>
+
+		<section id="cadastrar" class="invisivel">
+			<div id="logar" class="visivel">
+				<h1>Login</h1>
+				<form>
+					<input type="text" placeholder="Digite seu Login" id="login">	
+					<input type="password" placeholder="Digite sua Senha" id="senha">
+				</form>
+				<div class="button">
+					<button onclick="login()" id="apagar">Login</button>
+					<button onclick="cad()">Cadastrar</button>
+				</div>
+			</div>
+			<div id="Cad" class="invisivel">
+				<h1>Cadastro</h1>
+				<form>
+					<input type="text" placeholder="Digite seu Nome" id="nome">
+					<input type="text" placeholder="Digite sua Sobrenome" id="sob_nome">
+					<input type="text" placeholder="Digite seu Telefone" id="tel">
+					<input type="text" placeholder="Digite sua E-Mail" id="email">
+					<input type="text" placeholder="Digite seu Login" id="login_cad">
+					<input type="password" placeholder="Digite sua Senha" id="senha_cad">
+					<input type="password" placeholder="Digite sua Confirmação de senha" id="senha_cad_conf">
+				</form>
+				<div class="button">
+					<button onclick="salv()">Salvar</button>
+					<button onclick="volt()">Voltar</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="local" class="invisivel">
+			<h1>Cadastro Local</h1>
+			<form>	
+				<input type="text" placeholder="Nome" id="nome_loc">
+				<input type="text" placeholder="Cidade" id="cidade">
+				<input type="text" placeholder="Rua" id="rua">
+				<input type="text" placeholder="Bairro" id="bairro">
+				<input type="namber" placeholder="Número" id="num">
+				<textarea type="text" placeholder="Descrição do local" id="comit"></textarea>
+			</form>
+			<div class="button">
+				<button onclick="salv_local()">Salvar</button>
+			</div>
+		</section>
+
+		<section id="lista" class="invisivel">
+			<h1>Madrid</h1>
+			<div class="visivel" id="comec">
+				<div id="lados">
+					<div id="Dir-la">
+						<div class="img">
+							<div class="todo">
+								<img src="https://cdn.getyourguide.com/img/tour_img-371025-146.jpg">
+							</div>
+							<div class="column">
+								<div class="cima">
+									<p>Toledo</p>
+									<p class="text">Visite Toledo e Segóvia com esta excursão a bordo de um veículo com ar condicionado e admire as principais atrações das duas cidades. Visite o ...</p>
+								</div>
+								<div class="baixo">
+									<button onclick="toledo()">Detalhes</button>
+								</div>
+							</div>
+						</div>
+						<div class="img">
+							<div class="todo">
+								<img src="https://3.bp.blogspot.com/-ANeg8hzVICU/Urm5Izux74I/AAAAAAAAQho/2smgzzsZCJU/s1600/
+								palacio-real-Madrid.jpg">
+							</div>
+							<div class="column">
+								<div class="cima">
+									<p>Palacio Real</p>
+									<p class="text">Faça um tour guiado de uma hora e meia à residência oficial da Família Real espanhola e admire os exuberantes interiores do Palácio Real de Madrid. Caminhe...</p>
+								</div>
+								<div class="baixo">
+								<button onclick="palacio()">Detalhes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="Esq-la">
+						<div class="img">
+							<div class="todo">
+								<img src="https://cdn.getyourguide.com/img/tour_img-162184-145.jpg">
+							</div>
+							<div class="column">
+								<div class="cima">
+									<p>Arena de Touradas</p>
+									<p class="text">Visite a maior arena de touradas de Madri, a Plaza de Toros de Las Ventas, um dos mais importantes lugares de interesse cultural da cidade. A construção...</p>
+								</div>
+								<div class="baixo">
+									<button onclick="arena()">Detalhes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="invisivel" id="toledo">
+				<div class="tudo-det">
+					<div class="det-img">
+						<img src="https://cdn.getyourguide.com/img/tour_img-371025-146.jpg">
+						<h2>Toledo</h2>
+						<p>Visite Toledo e Segóvia com esta excursão a bordo de um veículo com ar condicionado e admire as principais atrações das duas cidades. Visite o Alcázar de Segóvia, que serviu de inspiração para o famoso castelo de Walt Disney.</p>
+					</div>
+					<div class="det-text">
+						<div class="text-det">
+							<h2>Detalhes</h2>
+							<p>Visite Toledo e Segovia em um tour para descobrir as principais atrações de duas das cidades mais populares da Espanha.</p>
+
+							<p>A cidade de Toledo, conhecida por muitos como a segunda Roma, foi declarada Patrimônio da Humanidade pela UNESCO. Durante o seu passeio, visite a Catedral de Toledo, o Mirador del Valle, o Mosteiro de San Juan de los Reyes e Puente de San Martin. Não perca a oportunidade de explorar as ruas estreitas, praças e jardins da cidade.</p>
+							
+							<p>Em Segovia, descubra o aqueduto, Alcazar e a Catedral de Segóvia. O aqueduto tem cerca de 15 quilômetros de extensão e transporta água até o pântano da Revega. A Praça Azoguejo é a área mais conhecida e melhor preservada do aqueduto.</p>
+						</div>
+						<div class="button-det">
+							<button onclick="volt()">Voltar</button>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="invisivel" id="palacio">
+				<div class="tudo-det">
+					<div class="det-img">
+						<img src="https://3.bp.blogspot.com/-ANeg8hzVICU/Urm5Izux74I/AAAAAAAAQho/2smgzzsZCJU/s1600/
+								palacio-real-Madrid.jpg">
+						<h2>Palacio Real</h2>
+						<p>Faça uma jornada pela história do Palácio Real de Madri em um tour sem fila na residência oficial dos reis da Espanha, e desfrute de uma degustação de tapas em um dos bares mais famosos da cidade, próximo ao Palácio Real.</p>
+					</div>
+					<div class="det-text">
+						<div class="text-det">
+							<h2>Detalhes</h2>
+							<p>Evite as longas filas para entrar no Palácio Real de Madri, e conheça mais detalhes sobre a história da monarquia espanhola em um tour guiado. Saiba como o palácio mudou ao longo dos tempos com os comentários informativos do seu guia especializado.</p>
+
+							<p>Explore uma extraordinária coleção de tapeçarias, porcelanas, relógios antigos, armaduras e trabalhos de artes do acervo real, incluindo pinturas de Goya e Velázquez. Visite os aposentos privados, o salão do trono e a sala das refeições de gala, juntamente com o salão dos espelhos do reino de Carlos IV.</p>
+							
+							<p>Admire a coleção de instrumentos musicais estradivários, e encante-se com os jardins de estilo inglês do século XIX e com as duas fontes de estilo neoclássico.</p>
+
+							<p>Ao selecionar a opção com degustação de tapas, descubra as tradicionais tapas espanholas e experimente a cultura gastronômica de Madri como um dos locais. Após o passeio pelo Palácio Real, visite um dos bares mais importantes da cidade. A Espanha é conhecida internacionalmente por sua gastronomia e orgulha-se da sua rica cultura e história culinária. Deguste diferentes tapas, preparadas com presuntos e queijos locais, omeletes e chouriço espanhóis. A degustação tem duração de meia hora.</p>
+
+							<p>No final do passeio, aproveite a oportunidade de continuar explorando o centro de Madri por sua conta.</p>
+						</div>
+						<div class="button-det">
+							<button onclick="volt()">Voltar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="invisivel" id="arena">
+				<div class="tudo-det">
+					<div class="det-img">
+						<img src="https://cdn.getyourguide.com/img/tour_img-162184-145.jpg">
+						<h2>Arena de Tourada</h2>
+						<p>Visite a maior arena de touradas de Madri, a Plaza de Toros de Las Ventas, um dos mais importantes lugares de interesse cultural da cidade. A construção neo-mudéjar de José Espeliú oferece uma visão imperdível sobre a paixão esportiva da Espanha.</p>
+					</div>
+					<div class="det-text">
+						<div class="text-det">
+							<h2>Detalhes</h2>
+							<p>Com mais de 80 anos de história, a Plaza de Toros de Las Ventas é um dos lugares de interesse mais importantes de Madri. Ao chegar na maior arena de touradas da Espanha, experimente como se sente o toureiro, o touro e seja envolvido pela imensa estrutura neo-mudéjar.</p>
+
+							<p>Projetada por José Espeliú, a Plaza de Toros foi construída em 1929 para acomodar a paixão nacional do país e atraiu alguns dos melhores toureiros da história e personalidades célebres e eruditos às arquibancadas. Entre os fãs estão Ernest Hemingway, Ava Gardner, Pablo Picasso, Jean Cocteau, Greta Garbo, Orson Welles e Sophia Loren.</p>
+							
+							<p>Em menos de uma hora, a excursão proporciona, mesmo nos horários mais movimentados durante as férias, uma visão fascinante sobre um dos pilares culturais e sociais de Madri.</p>
+							<div class="button-det">
+								<button onclick="volt()">Voltar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<script type="text/javascript" src="Js-Principal.js"></script>
+		<script type="text/javascript" src="Banco.js"></script>
+		<script type="text/javascript" src="Cliente.js"></script>
+		<script type="text/javascript" src="Local.js"></script>
+		<script type="text/javascript" src="Top.js"></script>
+	</body>
+</html>
