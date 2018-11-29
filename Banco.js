@@ -15,10 +15,6 @@ class Banco{
 		this.pessoa.push(tudo);
 		localStorage.setItem("Cliente",JSON.stringify(this.pessoa));
 	}
-	listar()
-	{
-		return this.pessoa;
-	}
 	buscar(senha)
 	{
 		var login = document.getElementById('login').value;
@@ -27,12 +23,9 @@ class Banco{
 			if(this.pessoa[i].senha_cad == senha && this.pessoa[i].login_cad == login)
 			{
 				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}	
+			}		
+		}
+		return false;
 	}
 }
 
